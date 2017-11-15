@@ -19,7 +19,7 @@ function handlePNG(data, cb) {
       cb(err)
       return
     }
-    cb(null, ndarray(new Uint8Array(img_data.data),
+    cb(null, ndarray(new Float32Array(img_data.data),
       [img_data.width|0, img_data.height|0, 4],
       [4, 4*img_data.width|0, 1],
       0))
